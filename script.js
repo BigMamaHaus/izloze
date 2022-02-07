@@ -1,16 +1,30 @@
-const vardi = ['Maigonis Maigulis', 'Stivs Gailis', 'Eina Huia', 'Valdis Kulis', 'Henrijs Suns'];
-const Balvas = ['Spa masāža', 'Ābols', 'Dzēriens', 'Lamborgini', 'NFT'];
-const naudaKopa = 1000000;//kopeja summa
+
+const vardi = ['Uldis Uldis', 'Valdis Zatlers', 'Edgars Berzins', 'Peteris Drazmanis', 'Lauris Reiniks'];
+
+const balvas = ['Ferrari', 'Dators', 'Luters', 'Piena speks', 'Kekavas kebab 10 eiro davanu karte'];
+
+const naudaKopa = 1000000; // kopeja summa 1 milj
+
 let uzvaretajuSkaits = 5;
-let rindas = document.querySelector(`.rindas`);
-rindas.innerHTML = ` `;
-for (let i = 0; i < 5; i++) {
+
+let rindas = document.querySelector('.rindas');
+
+rindas.innerHTML = ' ';
+
+for (let i = 0; i < uzvaretajuSkaits; i++) {
+
     let rand = Math.random() * vardi.length;
-    rand = Math.floor(rand);//noapaļo uz leju
-    console.log(vardi[rand]);//izvada konsolē
+
+    rand = Math.floor(rand);// noapaļo uz leju
+
+    let uzvaratejs = vardi[rand]; // izvada konsole nejausi izveletus vardus
+
+    rindas.innerHTML += `
+    
+        ${i + 1}
+    
+        ${uzvaratejs}
+    
+    `
+
 }
-rindas.innerHTML =
-    <tr>
-        <td>i</td>
-        <td>Uzvarētājs</td>
-    </tr>
