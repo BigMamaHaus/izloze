@@ -8,15 +8,16 @@ rindas.innerHTML = " ";
 
 for (let i = 0; i < uzvaretajuSkaits; i++) {
     //let rand = Math.random()*vardi.length;
-    let rand = Math.random() * 5;
+    let rand = Math.random() * vardi.length;
     rand = Math.floor(rand);//noapaļo uz leju, math.floor - noapaļo uz leju
 
-
-    let bonus = balva[rand];
-    let uzvaretajs = cilv[rand];
+    let uzvaretajs = vardi[rand];
+    let laimesti = balva[rand];
+    
     rindas.innerHTML += `
 <tr>
 <td>${i + 1}</td>
 <td>${uzvaretajs}</td>
+<td>${laimesti}</td>
 </tr>`
 }
